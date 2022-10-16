@@ -1,3 +1,196 @@
-@import url('https://fonts.googleapis.com/css2? family= Montserrat & display=swap');
-html,
-body {familia tipográfica: 'Montserrat', sans-serif;}
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+
+@media screen and (max-width: 600px) {
+
+  body {
+      background-color: rgb(253, 253, 255);
+   }
+ }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+    line-height: 1.45;
+    
+}
+header {
+  color: #FFFFFF;
+  background-color: #284b63;
+  padding: 80px 0;
+  text-align: center;
+}
+
+footer {
+    background: #353535;
+    padding: 32px 0;
+    text-align: center;
+    color: #868686;
+    font-size: 12px;
+}
+
+
+h1 {
+    font-size: 48px;
+    margin: 0 0 16px 0;
+  }
+
+h2 {
+    font-weight: 300 bold;
+    font-size: 24px;
+    
+    margin: 0 0 16px 0;
+  }
+
+section {
+  padding: 40px 0;
+  text-align: left;
+}
+
+aside.img {
+  margin: auto;
+}
+
+/**nav {
+    background-color: #FFFFFF;
+   width: 100%;
+   display: flex;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+
+}  
+
+
+
+/** declaramos variables de estilo para la barra de navegación **/
+:root {
+    --variable-name: value;
+  }
+
+  selector {
+    grid-area: var(--nombre-variable);
+  }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables fin */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*nav h1 {
+  color: var(--color-primario);
+}*/
+
+nav a {
+  color: var(--color-primario);
+  transition: var(--transicion);
+}
+nav a:hover {
+  color: grey;
+  border-bottom: 2px solid var(--valor-secundario);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--negrita);
+}
+
+/**************/
+
+div.contenedor {
+  width: 1080px;
+  margin: 0 auto;
+  }
+
+/*caja docentes
+}*/
+
+
+aside.bios {
+
+  background-color:#767474 
+  padding: 80px 0;
+  text-align: center;
+}
+
+
+
+#docentes ul {
+   display: flex;
+   place-content: space-between;
+}
+
+#docentes p {
+  
+}
+
+/*contacto*/
+
+#contacto {
+    color: #FFFFFF;
+  background-color: #284b63;
+  padding: 80px 0;
+  text-align: left;
+  display:flex
+  
+}
+
+aside.contacto{
+  justify-content: space-evenly;
+}
