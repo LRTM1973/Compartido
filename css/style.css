@@ -180,6 +180,8 @@ aside.bios {
   
 }
 
+#docentes img:hover {opacity: 0.3;transition: .5s ease; } /*Cuando paso mouse por arriba*/
+
 /*contacto*/
 
 #contacto {
