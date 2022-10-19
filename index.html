@@ -156,31 +156,36 @@
             </div>
         </aside>
         <!-- Sección Contacto -->
-
         <aside id="contacto">
             <div class="contenedor">
                 <section id="contacto">
-                    <h2>Contacto</h2>
-                    <br><br>
-                    <form action="  ">
-
-                        <label for="name"> Nombre </label>
-                        <input type="text " id="name" name="name ">
-                        <label for="message ">Mensaje</label>
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                        <input type="submit" value="Enviar mensaje">
-                        <br><br>
+                
+                    <div class="formulario">
+                        <form action="" name="formulario" method="get">
+                            <label for="">Apellido y nombre:</label>
+                            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Ingrese...">
+                            <br><br>
+                            <label for="">Seleccione curso:</label>
+                            <br>
+                            <input type="radio" name="so" value="Datos"> Ciencia de Datos
+                            <input type="radio" name="so" value="Analytics"> Data Analytics
+                            <input type="radio" name="so" value="Chatbots"> Chatbots
+                            <br><br>
+                            <input type="checkbox" name="terminos" id="terminos"> Acepto los Términos y Condiciones
+                            <br><br>
+                            <div class="centrado">
+                                <input type="submit" id="b1" name="btn" value="Enviar">
+                            </div>
+                        </form>
+                        <br>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.128299644561!2d-58.374026184813815!3d-34.600917080460135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaccb5b03bb5%3A0xb5fbb2ae0580a20!2sTucum%C3%A1n%20340%2C%20C1049%20AAH%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1665925631198!5m2!1ses-419!2sar"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    </form>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.128299644561!2d-58.374026184813815!3d-34.600917080460135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaccb5b03bb5%3A0xb5fbb2ae0580a20!2sTucum%C3%A1n%20340%2C%20C1049%20AAH%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1665925631198!5m2!1ses-419!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                          
 
                 </section>
-
-
-
 
 
     </main>
@@ -191,6 +196,62 @@
         Transformación Digital - 2022
     </footer>
 
+ <!-- Scripts -->                                                   
+                                                                   
+  <script>
+        var formulario = document.getElementsByName('formulario')[0],  
+        elementos = formulario.elements, 
+        boton = document.getElementById('b1') 
+
+       
+        // Validamos Nombre
+        
+        var validarNombre = function (e) {
+            if (formulario.nombre.value == 0) { // Si el campo id="nombre" del form está vacio...
+                alert("Completa el campo Apellido y Nombre")
+                e.preventDefault() // 
+            }
+        }
+
+       
+        // Validamos Curso
+        
+        var validarRadio = function (e) {
+            if (formulario.so[0].checked == true ||
+                formulario.so[1].checked == true ||
+                formulario.so[2].checked == true) {
+            } else {  //Si al menos uno de los Radio no está marcado....
+                alert("Selecciona un Sistema Operativo")
+                e.preventDefault()
+            }
+        }
+
+        
+        // Validamos Términos y Condiciones
+        
+        var validarCheckbox = function (e) {
+            if (formulario.terminos.checked == false) {
+                alert("Acepta los términos y condiciones")
+                e.preventDefault()
+            }
+        };
+
+        
+        // Se ejecuta al presionar submit e invoca a las tres validaciones
+        // --------------------------------------------------------
+        var validar = function (e) {  // "e" es el evento recibido del form (https://developer.mozilla.org/es/docs/Web/API/Event/preventDefault)
+            validarNombre(e)
+            validarRadio(e)
+            validarCheckbox(e)
+        }
+
+     
+        // Espera que se presione "enviar" y llama a "validar"
+        // submit es un evento DEL FORM, no del botón!
+        formulario.addEventListener("submit", validar)
+    </script>                                                        
+                                                                   
+                                                                   
 </body>
 
 </html>
