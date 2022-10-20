@@ -1,11 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
 
-@media screen and (max-width: 600px) {
-
-  body {
-      background-color: rgb(253, 253, 255);
-   }
- }
 
 body {
     margin: 0;
@@ -196,3 +190,29 @@ aside.bios {
 aside.contacto{
   justify-content: space-evenly;
 }
+
+/** Punto de corte-breakpoint responsive ***/
+
+@media screen and (max-width: 680px) {
+
+  body {
+    color: #df477c;
+  
+}
+
+header {
+
+  background-color: #4756df;
+  
+
+}
+
+footer {
+
+  background-color: #4756df;
+  color:#FFFFFF
+
+}
+
+}
+
