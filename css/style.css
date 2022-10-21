@@ -216,3 +216,16 @@ footer {
 
 }
 
+/** Estilos flexbox header **/
+
+
+.container  {
+
+  color: #FFFFFF;
+  background-color: #284b63;
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  
+  }
