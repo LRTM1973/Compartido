@@ -267,7 +267,19 @@
         // Espera que se presione "enviar" y llama a "validar"
         // submit es un evento DEL FORM, no del botón!
         formulario.addEventListener("submit", validar)
-    </script>                                                        
+    </script>
+                                            
+        
+   <!--Consume API de BA Data-->                                         
+   <script>
+
+        let url = "https://datosabiertos-catastro-apis.buenosaires.gob.ar/buscar/"
+            fetch(url)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log("Ocurrió un error", error)) 
+    </script>                                            
+                                            
                                                                    
 <!--Iconos de Fontawesom-->
 
